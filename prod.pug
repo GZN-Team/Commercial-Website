@@ -1,0 +1,101 @@
+include pug_helper/mixin.pug
+html
+  head
+    include pug_helper/linker_prodect.pug
+  body
+    // start header
+    - var elment=['featured' ,'featured','featured', 'daily_deals' , 'daily_deals' ,'best_seller', 'sala_top', 'rate','rate']
+    - var elemention=['featured' , 'daily_deals' ,'best_seller', 'sala_top', 'rate']
+    
+    include pug_helper/header.pug
+    // end header
+    // start section 
+    section(class="section_prodect")
+      div(class="contenr")
+
+        // top section product 
+        div(class="top_section")
+          div(class="srch_end_info_section")
+              form(action="#" , method="post" ,class="srch_info_sect")
+                button(type="button" class="js-show-filter")
+                  i(class="ti-angle-down") 
+                  span Filter
+                button(type="button" class="js-show-search" )
+                  i(class="ti-search ")
+                  span  search
+              .clearflex
+          div(class="nav-section")
+            div(class="nav-sec")
+              +nav_not_don(elemention,elemention_menu)
+        //end top section
+
+
+        // start search section
+        div(class="search panel-search-section")
+          form(action="#" method="post")
+            input(type="search " , class="input_search" placeholder="Search by color" data-ref="input-search" )
+        // end search section
+
+        // start information clothes
+        div(class="information_clothes panel-filter")
+          table(class="table_info_clothes")
+            thead
+              tr
+                td: a(herf="3") sort by
+                td: a(herf="3") sort by
+                td: a(herf="3") price
+                td: a(herf="3")  color
+                td: a(herf="3")  size
+
+            tr
+              td: a(herf="3"): a(herf="#")  t_shirt
+              td: a(herf="3"): a(herf="#")  default
+              td: a(herf="3"): a(herf="#")  $0.00 -$50.50
+              td: a(herf="3"): a(herf="#")  black
+              td: a(herf="3"): a(herf="#")  M
+
+            tr
+              td: a(herf="3"): a(herf="#")  sweater
+              td: a(herf="3"): a(herf="#")  popularity
+              td: a(herf="3"): a(herf="#")  $50.00 -$100.00
+              td: a(herf="3"): a(herf="#")  blue
+              td: a(herf="3"): a(herf="#")  L
+
+            tr
+              td: a(herf="3"): a(herf="#")  shorts
+              td: a(herf="3"): a(herf="#")  average rating
+              td: a(herf="3"): a(herf="#")  $100.00 -$150.00
+              td: a(herf="3"): a(herf="#")  yellow
+              td: a(herf="3"): a(herf="#")  XL
+            tr
+              td: a(herf="3"): a(herf="#")  choes
+              td: a(herf="3"): a(herf="#")  newness
+              td: a(herf="3"): a(herf="#")  $150.00 -$200.00
+              td: a(herf="3"): a(herf="#")  red
+              td: a(herf="3"): a(herf="#")  XXL
+            tr
+              td: a(herf="3"): a(herf="#")  Trousers
+              td: a(herf="3"): a(herf="#")  Price: Low to High
+              td: a(herf="3"): a(herf="#")  $200.00+
+              td: a(herf="3"): a(herf="#")  White
+              td: a(herf="3"): a(herf="#")  
+        // end information clothes
+
+        // image section prodect
+        div(class="image-section-prodect featured__filter")
+          each vall,index in elemention
+              +product_images('1e.png',vall,index+1)
+              +product_images('2e.png',vall,index+2)
+              +product_images('3e.png',vall,index+3)
+              +product_images('4e.png',vall,index+4)
+
+
+
+             
+
+              
+    // end section
+    +small_card
+    include pug_helper/footer.pug
+    include pug_helper/link_javascript.pug
+    

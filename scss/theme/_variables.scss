@@ -1,0 +1,34 @@
+/*=================== font family ====================*/
+$title-font: 'Oswald', sans-serif;
+$text-font: 'Roboto', sans-serif;
+/* color------------8*/
+
+$color_back_header:#00043c;
+$color_header: white;
+$color_header_hover: #ffb100;
+
+
+$color_back_footer:#232637;
+$color_footer: white;
+$color_footer_hover: #ffb100;
+ 
+$color_back_btn:#2577fd;
+$color_btn: white;
+$color_btn_hover: blue;
+
+ 
+/*=================== color variations ====================*/
+$floot_left: left;
+$floot_right: right;
+
+$text_align_left: left;
+$text_align_right: right;
+$text_align_center: center;
+
+/* @media varbles */
+$meduim: "(min-width: 1200px)";
+$mobile: "(min-width: 992px)";
+$wide-mobile: "(min-width: 768px)";
+$cmq: "(max-width: 767px)";
+$number_of_image: 2;
+/*== fonts ====================*/

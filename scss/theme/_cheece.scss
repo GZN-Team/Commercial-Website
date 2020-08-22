@@ -1,0 +1,52 @@
+
+ .chece-page
+ { 
+  position: relative;
+	display: block;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 40px 0px;
+  .product_image
+  { 
+    flex: 32.33333333333333%;
+    position: relative;
+    width: 100%;
+    margin: 7px;
+    float: $floot_left;
+    @include medium
+    {
+      max-width: (94% /4);
+      
+    };
+    @include mobile
+    {
+      max-width: (95% / 3);
+    };
+    @include wide-mobile
+    {
+      max-width: (95% / 2);
+    };
+    @include cmq
+    {
+      max-width: (95% / 1);
+    };
+     .icon-remove-cheese
+     {
+      font-size: 31px;
+      position: absolute;
+      top: 9px;
+      right: 3px;
+     }
+    
+
+
+    
+
+
+    
+
+
+  }
+}
+
+ 

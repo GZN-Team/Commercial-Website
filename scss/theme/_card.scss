@@ -1,0 +1,134 @@
+
+	table.cart-table {
+		width: 100%;
+		margin: 20px 0px;
+		border-collapse: collapse;
+		@include wide-mobile
+		{
+		  width: 100%;
+		};
+		@include cmq
+		{
+		  width: 100%;
+		};
+		thead {
+			border-bottom: 2px solid #D0D7DB;
+			tr {
+				th{
+
+					text-align: $text_align_left;
+					color: #838383;
+					font-size: 16px;
+					font-weight: 500;
+					padding: 16px 0;
+				}
+			}
+		}
+		/* ----------------------------------------------*/
+		.product_card_add{
+			tr{
+				border-bottom: 2px solid #D0D7DB;
+			td {
+				margin: 9px 0px;
+				color: black;
+			   font-size: 18px;
+			   font-weight: 600;
+			   padding-right: 15px;
+			   }
+			}
+		}
+		/* ----------------------------------------------*/
+		.product-col {
+			display: table;
+			img {
+				max-width: 100px;
+			}
+			.title_card_table_prodect {
+				display: table-cell;
+				vertical-align: middle;
+                padding-left: 30px;
+                padding-right: 15px;
+			}
+		}
+		/* ----------------------------------------------*/
+		.price-col,.total {
+            width: 15%;
+
+		}
+           /* ----------------------------------------------*/
+		.quantity-col {
+			width: 28%;
+			.pro-qty {
+				height: 39px;
+                 width: 173px;
+                border: 2px solid #EEF1F2;
+                 border-radius: 16px;
+                 text-align: center;
+				input {
+					width: 50px;
+                    text-align: center;
+                    font-weight: 700;
+					height: 100%;
+					border: none;
+				}
+				 .qtybtn {
+					color: #838383;
+					cursor: pointer;
+					font-size: 18px;
+					font-family: "Montserrat", sans-serif;
+					font-weight: 700;
+					padding: 16px 0;
+				}
+
+			}
+		}
+		/* ----------------------------------------------*/
+		.card-close {
+			
+			width: 6%;
+			
+			span
+			{   color: $color_back_btn;
+				font-size: 24px;
+				&:hover
+				{
+					cursor: pointer;
+					color: red;
+					font-weight: bold;
+					font-size: 30px;
+				}
+				
+			}
+		}
+		/* ----------------------------------------------*/
+		.end_card_table tr th
+		{
+			padding: 20px;
+			.input-coupon-code
+			{
+			
+		       border-radius: 22px;
+				width: 363px;
+		      height: 50px;
+				display: block;
+				text-align: center;
+			}
+		}
+
+		 /* total finlly */
+		 .finall-table-total
+		 {
+			 background-color: cornflowerblue;
+		 }
+		 
+	}
+
+
+
+
+
+
+
+
+
+

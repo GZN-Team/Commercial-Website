@@ -1,0 +1,133 @@
+include pug_helper/mixin.pug
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Document
+    include pug_helper/linker_prodect.pug
+  body
+    include pug_helper/header.pug
+    div(class="Product-Details")
+     div(class="contenr")
+
+      div(class="row-detail")
+        div(class="image-detail")
+          img(src="img/twemen.png")
+          i(class="fa fa-chevron-left fa-lg")
+          i(class="fa fa-chevron-right fa-lg")
+        div(class="slick-dot-image")
+          
+            img(src="img/twemen.png" class="selected")
+            
+          
+            img(src="img/22.png")
+            
+          
+            img(src="img/tt.jpg")
+
+        
+         
+            
+            
+
+
+      div(class="row-detail")
+        div(class="text-detail")
+          h2 Men's Essential Tee
+          p Black
+          P(class="price-detail") $30
+            span $20
+          p(class="star-detail")
+            i(class="ti-star")
+            i(class="ti-star")
+            i(class="ti-star")
+            i(class="ti-star")
+            i(class="ti-star")
+        div(class="size-color-delail")
+          p Black
+          p(class="color-detl")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+            a(href="#")
+          div(class="clearflex")
+          p(class="size-detl")
+            a(href="#") m
+            a(href="#") ml
+            a(href="#")  mll
+            a(href="#")  xxl
+            a(href="#") xl
+          div(class="number-dot input_card_number")
+            input(type="text" value="1")
+          button  Add to car
+           - var num_immage=['tt' , 'tt' , 'tt', 'tt']
+    
+
+	     
+			
+
+    div(class="row-detial-inform")
+      div(class="contenr")
+        div(class="dy-meu-taps")
+          ul(class="taps-list")
+            li(class="active" data-content=".content-one") one
+            li(data-content=".content-tow") twe
+            li(data-content=".content-three") three
+            li(data-content=".content-four") four
+
+          div(class="conent-taps")
+            div(class="content-one") 
+              || Beryl Cook is one of Britain’s most talented and amusing artists .
+              || Beryl Cook is one of Britain’s most talented and amusing artists .
+              || Beryl Cook is one of Britain’s most talented and amusing artists .
+              || Beryl Cook is one of Britain’s most talented and amusing artists .
+              || Beryl Cook is one of Britain’s most talented and amusing artists .
+            div(class="content-tow") 
+              table(class="table-taps")
+                tr 
+                  td Width
+                  td 128mm
+                tr 
+                  td height
+                  td 128mm
+
+            div(class="content-three") 
+              div(class="row1")
+               div(class="media-suggest")
+                div(class="media")
+                  div(class="media-inf")
+                    div(class="img-cont-tap")
+                      img(src="img/22.png" alt="")
+                    div(class="media-body")
+                      h4 Blake Ruiz
+                      h5 12th Feb, 2017 at 05:56 pm
+                  p(class="text-media") 
+                    || Beryl Cook is one of Britain’s most talented and amusing artists .
+                    || Beryl Cook is one of Britain’s most talented and amusing artists .
+                 
+              div(class="row1")
+                form(action="#" class="contact-form form-suggest") 
+                  div(class="form-group")
+                    input(type="email" class="form-control" placeholder="Your Email")
+                  div(class="form-group")
+                    textarea(name="" id="" cols="30" rows="4" class="form-control txtareaa-suggest " placeholder="Message that can help without it" dir="auto")
+                  div(class="form-group")
+                     input(type="submit" value="Send Message" class="btn-contant btn-submit btn-suggest" )
+            div(class="content-four") content-four
+      
+
+
+
+
+    div(class="detail-animtion")
+      div(class="contenr")
+        div(class="owl-carousel  owl-theme image_anim_home_cloths")
+          +animatin_img(num_immage)        
+
+    // footer the page prodect detail 
+    +small_card
+    include pug_helper/footer.pug
+    include pug_helper/link_javascript.pug

@@ -1,0 +1,57 @@
+include pug_helper/mixin.pug
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Document
+    include pug_helper/link_card.pug
+  body
+    include pug_helper/header.pug
+    div(class="cart-page")
+      div(class="contenr")
+        table(class="cart-table")
+          thead
+            tr
+              th Product
+              th Price
+              th Quantity
+              th Total
+              th
+          tbody(class="product_card_add")
+            +table_prod_card
+            +table_prod_card
+            +table_prod_card
+            +table_prod_card
+          tbody(class="end_card_table")
+            tr
+              th
+                input(type="text" name="coupon" placeholder="Coupon Code" class="input-coupon-code")
+              th
+              th: button(type="button") Apply coupon
+              th(colspan="2"): button(type="button") Update Cart
+            
+            tr(class="finall-table-total")
+              th Subtotal
+              th Delivery
+              th Discount
+              th Total 
+              th
+            tr
+              th(class="price_finlly_card")
+              th 0.0
+              th $4.0
+              th $20.5
+              th
+            
+                
+
+
+
+
+    //-----------------------------------------------------------
+  
+    //----------------------------------------------------
+    +small_card
+    include pug_helper/footer.pug
+    include pug_helper/link_javascript.pug

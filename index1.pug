@@ -1,0 +1,36 @@
+include pug_helper/mixin.pug
+html
+  head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    include pug_helper/linker_home.pug
+  body
+    - var elment=['featured' , 'daily deals' , 'best seller', 'sala top', 'rate']
+    - var name_imag=['login' , 'post-img1' , 'e','slide-02','slide-03','slder']
+    - var num_immage=['tt' , 'tt' , 'tt', 'tt']
+    include pug_helper/header.pug
+    // image top header
+    div(class="owl-carousel owl-theme image_animation_home_head")
+      +head_img_animatin(name_imag)
+    // start section home      //------------------------------------------------------------
+    section(class="div_section_home")
+      div(class="contenr")
+        div(class="top_section")
+          h1 store overiew
+        div(class="nav-section")
+          div(class="nav-sec")
+            +nav_not_don(elment)       
+          
+        //  image_clothes //--------------------------------------------------------------
+        - var num_immage=['1' , '2' , '3', '4']
+        div(class="image_clothes owl-stage")
+          div(class="owl-carousel  owl-theme image_anim_home_cloths")
+             +animatin_img(num_immage)
+    +small_card
+    include pug_helper/footer.pug
+    include pug_helper/link_javascript.pug
+
+
+
