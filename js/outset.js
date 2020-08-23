@@ -1,7 +1,5 @@
- (function ($) {
+; (function ($) {
     "use strict"
-
-    var count_u = 0;
     // in home page animateion image header 
      var owl_image = $('.image_animation_home_head ');
      owl_image.owlCarousel({
@@ -18,10 +16,10 @@
      autoplayHoverPause:true,
      dots:false,
      responsive: {
-  100: {
+    100: {
       items: 1
-     }
-  }
+       }
+              }
      });
 
 // in home  animation  image section
@@ -88,8 +86,82 @@ $('.icon-card').on('click',function(){
             $(this).addClass('active');
      });
 
+    //-----------------------------------------------------------
+
+
+    //--------------------------------------------------------------
+  // filter
+  $(function($) {
+    $("#slider-range").slider({
+    range: true,
+    min: 30,
+    max: 300,
+    values: [75, 300],
+    slide: function(event, ui) {
+    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+    }
+    });
+    $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+    " - $" + $("#slider-range").slider("values", 1));
+    });
+    // filter 2
+    $(document).ready(function() {
+        $("span.fa").click(function() {
+        $(this).toggleClass("ss")
+        });
+        $("#colors").click(function() {
+        $(".allcolor").fadeToggle(500);
+        $(".allcolor").css("z-index", 1);
+        if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+        } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+        }
+        });
+        $("#typs").click(function() {
+        $("#alltypes").fadeToggle(500);
+        if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+        } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+        }
+        });
+        $("#sorts").click(function() {
+        $("#allsorts").fadeToggle(500);
+        if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+        } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+        }
+        });
+        $("#sizes").click(function() {
+        $("#allsizes").fadeToggle(500);
+        if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+        } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+        }
+        });
+        $("#prices").click(function() {
+        $("#allprices").fadeToggle(500);
+        if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+        } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+        }
+        });
+        });
+
     
-  
- 
   
 })(jQuery)

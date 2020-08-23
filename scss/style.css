@@ -166,11 +166,10 @@ a {
         width: 100%; }
 
 /* end small card page */
-/* information form */
 .contact-form {
   width: 100%; }
   .contact-form .form-group {
-    margin-bottom: 0.4rem; }
+    margin-bottom: 1rem; }
     .contact-form .form-group h2 {
       text-align: center;
       text-transform: capitalize; }
@@ -529,6 +528,7 @@ button, .btn-submit {
   text-align: center;
   border-radius: 20px;
   margin-right: 10px;
+  border: none;
   color: white;
   font-weight: 500;
   font-size: 14px;
@@ -539,6 +539,7 @@ button, .btn-submit {
   z-index: 1; }
   button:hover, .btn-submit:hover {
     color: white;
+    border: none;
     background-color: blue; }
 
 /* end  all button */

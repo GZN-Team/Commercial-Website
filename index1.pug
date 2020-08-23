@@ -12,9 +12,11 @@ html
     - var num_immage=['tt' , 'tt' , 'tt', 'tt']
     include pug_helper/header.pug
     // image top header
+
+
     div(class="owl-carousel owl-theme image_animation_home_head")
       +head_img_animatin(name_imag)
-    // start section home      //------------------------------------------------------------
+    // start section home
     section(class="div_section_home")
       div(class="contenr")
         div(class="top_section")
@@ -23,7 +25,7 @@ html
           div(class="nav-sec")
             +nav_not_don(elment)       
           
-        //  image_clothes //--------------------------------------------------------------
+        //  image_clothes
         - var num_immage=['1' , '2' , '3', '4']
         div(class="image_clothes owl-stage")
           div(class="owl-carousel  owl-theme image_anim_home_cloths")

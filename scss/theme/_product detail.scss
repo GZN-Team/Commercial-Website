@@ -263,12 +263,10 @@
 	
    	/* end row 2 without text and color and size */
  }
+
+ 
+ 
 }
-
-
-
-
-
 
 
 //-------------------------------------------------------------------------------------------------------------
@@ -344,11 +342,14 @@
 		 .row1
 		 {
 			width: 50%;
+			padding-left: 10px;
 			// media is pecture end informtion about person
 			.media-suggest
 			{  
-				 position: relative;
+				position: relative;
+				height: 100%;
 				overflow: auto;
+				
 				.media
 				{    
 				 margin-bottom: 20px;
@@ -403,12 +404,19 @@
 			}
 
 			// form row1 detail
+			.from-sugg
+			{
+				margin-bottom: 0.4rem;
+			}
 		 }
+		 //end row1 
 
 		}
 	}
 }
 //--------------------------------------------------------------------------------------------------------------
+
+
 ////  detail-animtion
  .detail-animtion
  {

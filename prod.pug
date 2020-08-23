@@ -1,7 +1,7 @@
 include pug_helper/mixin.pug
 html
   head
-    include pug_helper/linker_prodect.pug
+    include pug_helper/linker.pug
   body
     // start header
     - var elment=['featured' ,'featured','featured', 'daily_deals' , 'daily_deals' ,'best_seller', 'sala_top', 'rate','rate']
@@ -38,7 +38,8 @@ html
 
         // start information clothes
         div(class="information_clothes panel-filter")
-          table(class="table_info_clothes")
+          include pug_helper/filter.pug
+          //table(class="table_info_clothes")
             thead
               tr
                 td: a(herf="3") sort by

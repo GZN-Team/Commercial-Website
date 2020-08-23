@@ -54,6 +54,11 @@
             $('.panel-filter').slideUp(400);
         }
     });
+
+    // function select filter 
+    $('.button').on('click', function(){
+        $(this).eq(2).toggleClass('select_filter');
+      });
    
      //---------------- end section ------------------------------------------
      //---------------- start  card ------------------------------------------
@@ -148,13 +153,32 @@
        }
     
    });
-   //------------------------------ 
+   //---------------------------------------------
+
    // function taps detail
    $('.taps-list li').on('click', function(){
-      $(this).addClass('active').siblings().removeClass('active');
-      $('.conent-taps > div').hide();
-      $($(this).data('content')).fadeIn();
-    })
+    $(this).addClass('active').siblings().removeClass('active');
+    $('.conent-taps > div').hide();
+    $($(this).data('content')).fadeIn();
+  })
+  // function data in tap end email
+  function create_suggest()
+  {    var namepe= $('.eml-suggest').val()!=="" ? $('.eml-suggest').val():"no have name" ;
+       var namperson = namepe.split("@");
+       var datatim=new Date();
+      var sug="<div class='media'><div class='media-inf'>"
+       +"<div class='img-cont-tap'><img src='img/22.png' alt=''/></div>"
+        +"<div class='media-body'><h4>"+namperson[0]+"</h4><h5>"+ datatim.getDate()+","+datatim.getMonth()+","+datatim.getFullYear()+" at "+datatim.getSeconds()+ ":"+datatim.getMinutes()+ ":"+datatim.getMinutes()  +"</h5></div></div>"
+       +"<p class='text-media'>"+ $('.txtareaa-suggest').val() +"</p></div>";
+     $(sug).appendTo('.media-suggest');
+  }
+  
+
+ $('.btn-suggest').on('click', function(e){
+   e.preventDefault();
+   create_suggest();
+ });
+
 
     //--------------------------end prodect datial
 
@@ -184,25 +208,6 @@
     +'<div class="clearflex"></div></h3>'
      +'<div class="pricing"><span class="price-dc">$120.00</span><span class="price-sale">$80.00</span></div></div></div>').appendTo('.chece-page');
    };
-  
-
-
-   function create_suggest()
-   {
-       var sug="<div class='media'><div class='media-inf'>"
-        +"<div class='img-cont-tap'><img src='img/22.png' alt=''/></div>"
-         +"<div class='media-body'><h4>Blake Ruiz</h4><h5>12th Feb, 2017 at 05:56 pm</h5></div></div>"
-        +"<p class='text-media'>"+ $('.txtareaa-suggest').val() +"</p></div>";
-      $(sug).appendTo('.media-suggest');
-   }
-   
-
-  $('.btn-suggest').on('click', function(e){
-    e.preventDefault();
-    create_suggest();
-  });
-
-
 
 
 
@@ -218,24 +223,16 @@
    //-------------------------------------------------------------------
    var faicon = $(".fa-icon");
   
-
+     var count_u=0;
    faicon.on('click', function (e) {
        e.preventDefault();
        $(this).toggleClass('active');
-       var scan=0;
        if($(this).is('.active'))
-       { scan=1;}
-       var firstimage=$(this).parent().parent().parent().find(".img-fluid").attr("src");
-       var secondimage=$(this).parent().parent().parent().find(".hover-img").attr("src");
-        
-    alert(scan); 
-    $.ajax({
-        type:"POST",
-url:"wish.php",
-data:"firstimage="+firstimage+"&secondimage="+secondimage+"&scan="+scan
-
-    });
-       
+       { count_u=count_u+1; }
+       else
+       {
+        count_u=count_u -1;
+       }
   
    });
 

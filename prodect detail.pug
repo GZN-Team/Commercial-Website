@@ -5,7 +5,7 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title Document
-    include pug_helper/linker_prodect.pug
+    include pug_helper/linker.pug
   body
     include pug_helper/header.pug
     div(class="Product-Details")
@@ -25,6 +25,7 @@ html
             
           
             img(src="img/tt.jpg")
+
 
         
          
@@ -65,10 +66,7 @@ html
           button  Add to car
            - var num_immage=['tt' , 'tt' , 'tt', 'tt']
     
-
-	     
-			
-
+    //-------------------------------------------------------------
     div(class="row-detial-inform")
       div(class="contenr")
         div(class="dy-meu-taps")
@@ -76,7 +74,6 @@ html
             li(class="active" data-content=".content-one") one
             li(data-content=".content-tow") twe
             li(data-content=".content-three") three
-            li(data-content=".content-four") four
 
           div(class="conent-taps")
             div(class="content-one") 
@@ -110,22 +107,33 @@ html
                  
               div(class="row1")
                 form(action="#" class="contact-form form-suggest") 
-                  div(class="form-group")
-                    input(type="email" class="form-control" placeholder="Your Email")
-                  div(class="form-group")
+                  div(class="form-group from-sugg")
+                    input(type="email" class="form-control eml-suggest" placeholder="Your Email")
+                  div(class="form-group from-sugg")
                     textarea(name="" id="" cols="30" rows="4" class="form-control txtareaa-suggest " placeholder="Message that can help without it" dir="auto")
-                  div(class="form-group")
+                  div(class="form-group from-sugg")
                      input(type="submit" value="Send Message" class="btn-contant btn-submit btn-suggest" )
-            div(class="content-four") content-four
       
 
 
-
-
+    //---------------------------------------
     div(class="detail-animtion")
       div(class="contenr")
         div(class="owl-carousel  owl-theme image_anim_home_cloths")
-          +animatin_img(num_immage)        
+          +animatin_img(num_immage)
+	     
+				
+		  
+		   
+        
+
+		   
+				
+	  
+                  
+
+
+
 
     // footer the page prodect detail 
     +small_card

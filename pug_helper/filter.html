@@ -1,0 +1,156 @@
+
+<ul class="navber_filter">
+  <li class="button lst_nav_filter" id="colors"><i>Color</i>
+    <!--span#colorsign.fa.fa-angle-down(style='position:absolute;right:2px;font-size: 25px;')-->
+    <div class="allcolor down_filter">
+      <div style="padding: 10px;border-bottom:2px solid #ccc;position: relative;;"><i>0 selected</i><span style="border: 1px solid #ccc;  right:2px; width: 50px;text-align: center;position: absolute;">All</span></div>
+      <div style="padding: 16px;">
+        <label class="container11">
+          <input type="checkbox" checked="checked"/><span class="checkmark" style="background-color: blue;"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color: white;"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:green"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:gray"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:red"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:brown"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:yellow"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:pink"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:purple"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:orange"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:lightblue"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:lightgreen"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark" style="background-color:black"></span>
+        </label>
+        <label class="container11">
+          <input type="checkbox"/><span class="checkmark"></span>
+        </label>
+      </div>
+      <div style="border-top:1px solid #ccc;padding: 5px; ">
+        <button class="btn_filter">Applay</button>
+      </div>
+    </div>
+  </li>
+  <!--**************************************88-->
+  <li class="button lst_nav_filter" id="typs"><i>Type</i>
+    <!--span#colorsign.fa.fa-angle-down(style='position:absolute;right: 2px;font-size:25px;')-->
+    <div class="alltype down_filter" id="alltypes">
+      <div style="padding: 10px;border-bottom:2px solid #ccc;position: relative;;">
+        <input id="amountoftype" type="text" readonly="" style="border:0; color:#f6931f; font-weight:bold;width: 10px;" value="1"/><i>selected</i><span style="border: 1px solid #ccc;  right:2px; width: 50px;text-align: center;position: absolute;">All</span>
+      </div>
+      <ul class="filtermenu" style="padding: 0;">
+        <li>
+          <input type="checkbox"/>T_shirt
+        </li>
+        <li>
+          <input type="checkbox"/>Sweater
+        </li>
+        <li>
+          <input type="checkbox"/>Shorts
+        </li>
+        <li>
+          <input type="checkbox"/>Choes
+        </li>
+        <li>
+          <input type="checkbox"/> Trousers
+        </li>
+        <li>
+          <input type="checkbox"/>Jeanz
+        </li>
+      </ul>
+      <div style="border-top:1px solid #ccc;padding: 5px; ">
+        <button class="btn_filter">Applay</button>
+      </div>
+    </div>
+  </li>
+  <li class="button lst_nav_filter" id="sorts"><i>Sort By</i>
+    <!--span#colorsign.fa.fa-angle-down(style='position:absolute;right: 2px;font-size:25px;')-->
+    <div class="alltype down_filter" id="allsorts">
+      <div style="padding: 10px;border-bottom:2px solid #ccc;position: relative;;"><i>0 selected</i><span style="border: 1px solid #ccc;  right:2px; width: 50px;text-align: center;position: absolute;">All</span></div>
+      <ul class="filtermenu" style="padding: 0;">
+        <li>
+          <input type="checkbox"/>Default
+        </li>
+        <li>
+          <input type="checkbox"/>Popularity
+        </li>
+        <li>
+          <input type="checkbox"/>Average rating
+        </li>
+        <li>
+          <input type="checkbox"/>Newness
+        </li>
+      </ul><span>price:</span>
+      <ul class="filtermenu" style="padding: 0;">
+        <li>
+          <input type="checkbox"/> Low to High
+        </li>
+        <li>
+          <input type="checkbox"/> High to Low
+        </li>
+      </ul>
+      <div style="border-top:1px solid #ccc;padding: 5px; ">
+        <button class="btn_filter">Applay</button>
+      </div>
+    </div>
+  </li>
+  <div class="button lst_nav_filter" id="prices"><i>Price Ring </i>
+    <!--span#colorsign.fa.fa-angle-down(style='position:absolute;right: 2px;font-size:25px;')-->
+    <div class="alltype down_filter" id="allprices">
+      <div style="padding: 10px;border-bottom:2px solid #ccc;position: relative;;">
+        <label for="amount">Price range selected:</label><span style="border: 1px solid #ccc;  right:2px; width: 50px;text-align: center;position: absolute;">All</span>
+        <input id="amount" type="text" readonly="" style="border:0; color:#f6931f; font-weight:bold; max-width: 100%; margin-top: 7px;"/>
+      </div>
+      <div style="margin-top:10px"><i>30$</i><span style="float:right">300$</span></div>
+      <div id="slider-range" style="margin-bottom:10px;overflow:initial; max-width: 96%;"></div>
+      <div style="border-top:1px solid #ccc;padding: 5px; ">
+        <button class="btn_filter">Applay</button>
+      </div>
+    </div>
+  </div>
+  <div class="button lst_nav_filter" id="sizes"><i>Size </i>
+    <!--span#colorsign.fa.fa-angle-down(style='position:absolute;right: 2px;font-size:25px;')-->
+    <div class="alltype down_filter" id="allsizes">
+      <div style="padding: 10px;border-bottom:2px solid #ccc;position: relative;"><i>0 selected<span style="border: 1px solid #ccc;  right:2px; width: 50px;text-align: center;position: absolute;">All</span></i></div><i>
+        <ul class="filtermenu" style="padding: 0;list-style-type:none;overflow:hidden">
+          <li style="text-align:center;     width:46%;margin:2%;float:left">
+            <input type="checkbox"/>M
+          </li>
+          <li style="text-align:center;width:46%;margin:2%;float:left">
+            <input type="checkbox"/>XL
+          </li>
+          <li style="text-align:center;width:46%;margin:2%;float:left ">
+            <input type="checkbox"/>XXL
+          </li>
+          <li style="text-align:center;float:left;width:46%;margin:2%">
+            <input type="checkbox"/>S
+          </li>
+        </ul>
+        <div style="border-top:1px solid #ccc;padding: 5px; ">
+          <button class="btn_filter">Applay</button>
+        </div></i>
+    </div>
+  </div>
+</ul>
