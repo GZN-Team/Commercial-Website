@@ -1,0 +1,163 @@
+//=================================================
+//= header:                                       =
+//=================================================
+
+// navbar File includ:
+@import "../Componant/navbar";
+
+.header
+{
+  width: 100%;
+  background-color: $header_background_color;
+  background-size: cover;
+  display: block;
+
+  //================================================
+  //= navbar:                                      =
+  //================================================
+
+  .header_container
+  {
+    width:100%;
+    display: block;
+    overflow: hidden;         //?why i cant delete it
+    position: relative;
+    z-index: 2;
+    padding: 20px 36px 0px; //*Edited
+    img                       //!change to svg
+        {
+          width:  90px;
+          height: 90px;
+          //margin-right: 40px;
+          float: $floot_left;
+        }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+//*********************************************************
+
+    //=================================================
+    //= risponsive header container:                 =
+    //=================================================
+
+    /*
+    .risponsive_header
+    {
+      /*
+      img //.logo            //change to svg
+        {
+          width:  93px;
+          height: 93px;
+          margin-right: 30px;
+          float: $floot_left;
+        }
+      */
+        
+      
+
+      //Risponsive
+
+
+       /* 
+        @include  medium
+        {
+          width: 12%;
+        };
+        @include  mobile
+        {
+            width: 12%;
+        };
+        @include wide-mobile
+        {
+            width: 100%;
+        };
+        @include cmq
+        {
+            width: 100%;
+        };*/
+    }
+    
+    /*
+    .nav-top
+    {   
+        padding: 18px 0px 18px 0px;   
+        float: $floot_left;
+        color: $navbar_text_color;
+        @include  medium
+        {
+          max-width: 84%;
+          float: $floot_left;
+
+        };
+
+        @include  mobile
+        {
+            max-width: 84%;
+            float: $floot_left;
+
+        };
+        @include wide-mobile
+        {
+          float: none;
+          max-width: 100%;
+          display: none;
+        };
+        @include cmq
+        {
+            float: none;
+            max-width: 100%;
+            display: none;
+        };
+        */
+
+        
+        /*.navbar_elements:last-of-type  //??????????????
+        {
+          float: $floot_right;
+        }
+        */
+
+        /*
+        .nav-icon{
+        list-style: none;
+        width: 100%;
+        color: $navbar_text_color;
+        padding-left: 0px;
+        font-size: 20px;
+        li 
+        {
+          float: $floot_left;
+          a 
+          {
+            display: inline-block;
+            color: white;\
+            text-align: center;
+            padding: 14px 30px;
+            text-decoration: none;
+            
+          }
+        }
+      }
+    }
+  }
+    */
+  
+}
+

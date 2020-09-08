@@ -1430,12 +1430,12 @@
 	};
 
 	/**
-	 * Preloads images with auto width.
+	 * Preloads slider_images with auto width.
 	 * @todo Replace by a more generic approach
 	 * @protected
 	 */
-	Owl.prototype.preloadAutoWidthImages = function(images) {
-		images.each($.proxy(function(i, element) {
+	Owl.prototype.preloadAutoWidthImages = function(slider_images) {
+		slider_images.each($.proxy(function(i, element) {
 			this.enter('pre-loading');
 			element = $(element);
 			$(new Image()).one('load', $.proxy(function(e) {
@@ -1921,7 +1921,7 @@
 					//TODO: Need documentation for this new option
 					if (settings.lazyLoadEager > 0) {
 						n += settings.lazyLoadEager;
-						// If the carousel is looping also preload images that are to the "left"
+						// If the carousel is looping also preload slider_images that are to the "left"
 						if (settings.loop) {
               position -= settings.lazyLoadEager;
               n++;
@@ -2081,7 +2081,7 @@
 		});
 
 		// Autoresize the height of the carousel when window is resized
-		// When carousel has images, the height is dependent on the width
+		// When carousel has slider_images, the height is dependent on the width
 		// and should also change on resize
 		$(window).resize(function() {
 			if (refThis._core.settings.autoHeight) {

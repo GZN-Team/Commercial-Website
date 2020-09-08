@@ -1,0 +1,202 @@
+//======================================================
+//= navbar container:                                  =
+//======================================================
+
+.navbar {
+	@include font_line;      //!!!!!!!!!
+	padding-top: 36px;
+	list-style: none;
+	width: 100%;
+
+	//===================================================
+	//= navbar Elements:                                =
+	//===================================================
+
+	.navbar_elements {
+		float: $floot_left;
+		display: inline-block;
+		color: $navbar_text_color;
+		padding: 2px 0px 5px 45px ;
+		text-transform: capitalize;
+		text-shadow:$text_shadow;    //*New
+		&:hover{
+			color: $navbar_text_color_hover;
+		}
+
+		//text-decoration: none;                  //??????
+		/*.active:hover {                         //?????????
+			color: $navbar_text_color_hover;
+		}*/
+	}
+
+	.navbar_icons{ padding-left: 40px; }
+
+	.men_element{
+		&:hover {
+			.men_dropdown_list {display: block;}
+		}
+	}
+
+	.women_element{
+		&:hover {
+			.women_dropdown_list {display: block;}
+		}
+	}
+	
+	.language__element{
+	/*          
+		&::after{                    //!Dont work
+			padding-left: 5px;
+		}
+		*/
+		&:hover{
+			.language_dropdown_list{display: block};
+		}
+	}
+	
+	.ti-angle-down{
+		padding-left: 8px;
+	
+	}
+	//===================================================
+	//= Drop lists:                                     =
+	//===================================================
+
+	.dropdown_list{
+		width: 200px;
+		position: fixed;               //! Convert to absolute
+		top: 80px;
+		display: none;                
+		background-color: white;
+		border: 1px solid rgb(180, 176, 176);
+		border-radius: 5px;
+		//text-decoration: none;          //????????
+		//z-index: 2000;                  //????????
+		a {
+			font:{                        //!!!!!!!!
+				size: $second_font_size;
+				weight: $second_font_weight;
+			}
+			color: black;
+			padding: 17px 16px;
+			display: block;
+			text-align: left;
+			border-top: .3px solid rgb(209, 203, 203);
+			&:hover {
+				border-left: 5px solid red;
+				}
+		}
+	}
+	
+	.men_dropdown_list{
+		left:264px;
+	}
+
+	.women_dropdown_list{
+		left:342px;
+	}
+	
+	.language_dropdown_list{
+		width:120px;
+		text-shadow:0 0 0;         //*Reset
+		font:{                             //!!!!!!!!
+			size: $second_font_size;
+			weight: $second_font_weight;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//**************************************************
+
+		//Responsive
+
+		/*
+		@include medium {
+			float: $floot_left;
+		}
+
+		;
+
+		@include mobile {
+			float: $floot_left;
+		}
+
+		;
+
+		@include wide-mobile {
+			float: none;
+			max-width: 100%;
+			padding: 3px;
+			text-align: $text_align_left;
+		}
+
+		;
+
+		@include cmq {
+			float: none;
+			max-width: 100%;
+			padding: 3px;
+			padding: 3px;
+			text-align: $text_align_left;
+		}
+
+		;
+
+	//}
+
+	//******************************************************
+
+	@include medium {
+		float: $floot_left;
+	}
+
+	;
+
+	@include mobile {
+		float: $floot_left;
+	}
+
+	;
+
+	@include wide-mobile {
+		float: none;
+		max-width: 100%;
+	}
+
+	;
+
+	@include cmq {
+		float: none;
+		max-width: 100%;
+	}
+
+	;
+	*/
+	/////////////////////////
+}
+
+

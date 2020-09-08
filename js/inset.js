@@ -18,8 +18,8 @@
     // function add class active linker header
     var nav_offset_top = $('header').height() + 50;
 
-    $('.navber li a').on('click', function () {
-        $('.navber a').removeClass('active');
+    $('.navbar li a').on('click', function () {
+        $('.navbar a').removeClass('active');
         $(this).addClass('active');
 
     });

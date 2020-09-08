@@ -9,9 +9,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
   var _owl$owlCarousel;
 
-  var owl_image = $('.image_animation_home_head ');
+  var owl_image = $('.slider ');
   owl_image.owlCarousel({
-    items: 1,
     loop: true,
     margin: 10,
     nav: true,
@@ -23,10 +22,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     smartSpeed: 1500,
     nav_offset_top: true,
     autoplayHoverPause: true,
-    dots: false
+    dots: false,
+    responsive: {
+      100: {
+        items: 1
+      }
+    }
   }); // in home  animation  image section
 
-  var owl = $('.image_anim_home_cloths');
+  var owl = $('.image_anim_home_Clothes');
   owl.owlCarousel((_owl$owlCarousel = {
     loop: true,
     margin: 10,
@@ -75,31 +79,82 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   $('.nav-sec ul li').on('click', function () {
     $('.nav-sec li').removeClass('active');
     $(this).addClass('active');
-  }); // in page product page move between image 
+  }); //-----------------------------------------------------------
+  //--------------------------------------------------------------
+  // filter
 
-  $('.slick-dot-image  img').on('click', function () {
-    $('.slick-dot-image img').removeClass('selected');
-    $(this).addClass('selected');
-    $('.image-detail img').attr('src', $(this).attr('src'));
-  });
-  $('.image-detail .fa-chevron-left').on('click', function () {
-    if ($('.slick-dot-image .selected').is(':last-child')) {
-      $('.slick-dot-image  img').eq(0).click();
-    } else {
-      $('.slick-dot-image  .selected').next().click();
-    }
-  });
-  $('.image-detail .fa-chevron-right').on('click', function () {
-    if ($('.slick-dot-image .selected').is(':first-child')) {
-      $('.slick-dot-image  img:last').click();
-    } else {
-      $('.slick-dot-image  .selected').prev().click();
-    }
-  }); //--------------------small page card
+  $(function ($) {
+    $("#slider-range").slider({
+      range: true,
+      min: 30,
+      max: 300,
+      values: [75, 300],
+      slide: function slide(event, ui) {
+        $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+      }
+    });
+    $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+  }); // filter 2
 
-  var sum = 0;
-  $('.sml-title_card span').each(function () {
-    sum += parseInt($(this).text());
+  $(document).ready(function () {
+    $("span.fa").click(function () {
+      $(this).toggleClass("ss");
+    });
+    $("#colors").click(function () {
+      $(".allcolor").fadeToggle(500);
+      $(".allcolor").css("z-index", 1);
+
+      if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+      } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+      }
+    });
+    $("#typs").click(function () {
+      $("#alltypes").fadeToggle(500);
+
+      if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+      } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+      }
+    });
+    $("#sorts").click(function () {
+      $("#allsorts").fadeToggle(500);
+
+      if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+      } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+      }
+    });
+    $("#sizes").click(function () {
+      $("#allsizes").fadeToggle(500);
+
+      if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+      } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+      }
+    });
+    $("#prices").click(function () {
+      $("#allprices").fadeToggle(500);
+
+      if ($(this).find("span").hasClass("fa-angle-down")) {
+        $(this).find("span").removeClass("fa-angle-down");
+        $(this).find("span").addClass("fa-angle-up");
+      } else {
+        $(this).find("span").removeClass("fa-angle-up");
+        $(this).find("span").addClass("fa-angle-down");
+      }
+    });
   });
-  $('.small-total span').text(sum);
 })(jQuery);

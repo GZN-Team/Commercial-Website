@@ -1,15 +1,15 @@
-include pug_helper/mixin.pug
+include HTML/Pug/mixin.pug
 html
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title Document
-    include pug_helper/linker.pug
+    include HTML/Pug/linker.pug
   body
-    include pug_helper/header.pug
+    include HTML/Pug/header.pug
     div(class="cart-page")
-      div(class="contenr")
+      div(class="main_container")
         table(class="cart-table")
           thead
             tr
@@ -53,5 +53,5 @@ html
   
     //----------------------------------------------------
     +small_card
-    include pug_helper/footer.pug
-    include pug_helper/link_javascript.pug
+    include HTML/Pug/footer.pug
+    include HTML/Pug/link_javascript.pug

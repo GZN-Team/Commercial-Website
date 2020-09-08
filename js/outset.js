@@ -1,7 +1,7 @@
 ; (function ($) {
     "use strict"
     // in home page animateion image header 
-     var owl_image = $('.image_animation_home_head ');
+     var owl_image = $('.slider ');
      owl_image.owlCarousel({
      loop:true,
      margin:10,
@@ -23,7 +23,7 @@
      });
 
 // in home  animation  image section
-  var owl = $('.image_anim_home_cloths');
+  var owl = $('.image_anim_home_Clothes');
   owl.owlCarousel({
 loop:true,
 margin:10,

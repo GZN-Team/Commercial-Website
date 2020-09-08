@@ -18,7 +18,7 @@
   }); // function add class active linker header
 
   var nav_offset_top = $('header').height() + 50;
-  $('.navber li ').click(function () {
+  $('.navbar li ').click(function () {
     $(this).addClass('active').siblings().removeClass('active');
   }); // function sider header
 
@@ -28,7 +28,7 @@
     });
   }); // header  animation
 
-  var owl_image = $('.image_animation_home_head ');
+  var owl_image = $('.slider ');
   owl_image.owlCarousel({
     items: 1,
     loop: true,
@@ -50,7 +50,7 @@
   }); //--------------------------------------------
   // animation  image
 
-  var owl = $('.image_anim_home_cloths');
+  var owl = $('.image_anim_home_Clothes');
   owl.owlCarousel({
     loop: true,
     margin: 10,

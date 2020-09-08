@@ -1,20 +1,20 @@
-include pug_helper/mixin.pug
+include HTML/Pug/mixin.pug
 html
   head
-    include pug_helper/linker.pug
+    include HTML/Pug/linker.pug
   body
     // start header
-    - var elment=['featured' ,'featured','featured', 'daily_deals' , 'daily_deals' ,'best_seller', 'sala_top', 'rate','rate']
+    - var elements=['featured' ,'featured','featured', 'daily_deals' , 'daily_deals' ,'best_seller', 'sala_top', 'rate','rate']
     - var elemention=['featured' , 'daily_deals' ,'best_seller', 'sala_top', 'rate']
     
-    include pug_helper/header.pug
+    include HTML/Pug/header.pug
     // end header
     // start section 
     section(class="section_prodect")
-      div(class="contenr")
+      div(class="main_container")
 
         // top section product 
-        div(class="top_section")
+        div(class="products_navbar_header")
           div(class="srch_end_info_section")
               form(action="#" , method="post" ,class="srch_info_sect")
                 button(type="button" class="js-show-filter")
@@ -38,7 +38,7 @@ html
 
         // start information clothes
         div(class="information_clothes panel-filter")
-          include pug_helper/filter.pug
+          //include HTML/Pug/filter.pug
           //table(class="table_info_clothes")
             thead
               tr
@@ -97,6 +97,6 @@ html
               
     // end section
     +small_card
-    include pug_helper/footer.pug
-    include pug_helper/link_javascript.pug
+    include HTML/Pug/footer.pug
+    include HTML/Pug/link_javascript.pug
     

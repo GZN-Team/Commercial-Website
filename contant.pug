@@ -1,14 +1,14 @@
-include pug_helper/mixin.pug
+include HTML/Pug/mixin.pug
 html
   head
-    include pug_helper/linker.pug
+    include HTML/Pug/linker.pug
   body
-    include pug_helper/header.pug
+    include HTML/Pug/header.pug
     div(class="contant-page")
-      div(class="contenr")
+      div(class="main_container")
         div(class="contant-section")
           h1  contact us
-          div(class="row1")
+          div(class="Sections")
             form(action="#" class="contact-form")
               div(class="form-group")
                 h2 Send us a message
@@ -27,7 +27,7 @@ html
 
 
           // row 2
-          div(class="row1")
+          div(class="Sections")
             div(class="tool-contant")
               i(class="ti-location-pin icon-contant")
               div(class="media-contant")
@@ -54,5 +54,5 @@ html
 
 
     +small_card
-    include pug_helper/footer.pug
-    include pug_helper/link_javascript.pug
+    include HTML/Pug/footer.pug
+    include HTML/Pug/link_javascript.pug

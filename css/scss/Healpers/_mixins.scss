@@ -1,0 +1,260 @@
+//==================
+//= overlay Mixins =
+//==================
+
+@mixin overlay {             //! ?????
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;	
+}
+
+//======================
+//= Defulte Font Style =
+//======================
+
+@mixin font_line {                 //!Make another mixins
+	font:{
+		weight: $main_font_weight;
+		size: $main_font_size;
+		family: $font_family;
+	}
+	//letter-spacing: 0;          //!
+}
+
+//================
+//= filter Mixin =
+//================
+
+@mixin filter ($filter-value) {
+	filter: ($filter-value);
+	-o-filter: ($filter-value);
+	-ms-filter: ($filter-value);
+	-moz-filter: ($filter-value);
+	-webkit-filter: ($filter-value);
+}
+
+//=====================
+//= placeholder Mixin =
+//=====================
+
+@mixin placeholder {
+	&.placeholder {
+		@content;
+	}
+	&:-moz-placeholder {
+		@content;
+	}
+	&::-moz-placeholder {
+		@content;
+	}
+	&::-webkit-input-placeholder {
+		@content;
+	}
+}
+
+//==================
+//= Prefixes Mixin =
+//==================
+
+@mixin perfixer($property,$value,$properties:()) //$properties -> prefixes
+{
+	@each $prefix in $properties {
+		#{'-'+ $prefix + '-'+$property}:$value;
+	}
+#{$property}:$value;
+}
+
+//=====================
+//= translation Mixin =
+//=====================
+
+@mixin transition($args: all 0.3s ease 0s) { //-.Translation
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+//translation duration:
+@mixin transition-duration($args1, $args2) {
+	-webkit-transition-duration: $args1, $args2;
+	-moz-transition-duration: $args1, $args2;
+	-o-transition-duration: $args1, $args2;
+	transition-duration: $args1, $args2;
+}
+
+//translation delay:
+@mixin transition-delay($args1, $args2) {
+	-webkit-transition-delay: $args1, $args2;
+	-moz-transition-delay: $args1, $args2;
+	-o-transition-delay: $args1, $args2;
+	transition-delay: $args1, $args2;
+}
+
+//translation property:
+@mixin transition-property($args1, $args2) {
+	-webkit-transition-property: $args1, $args2;
+	-moz-transition-property: $args1, $args2;
+	-o-transition-property: $args1, $args2;
+	transition-property: $args1, $args2;
+}
+
+//=======================
+//= border-radius Mixin =
+//=======================
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+//==================
+//= gradient Mixin =
+//==================
+
+@mixin gradient($deg, $args1,$args2) {
+	background: -webkit-linear-gradient($deg, $args1, $args2);
+	background: -moz-linear-gradient($deg, $args1, $args2);
+	background: -ms-linear-gradient($deg, $args1, $args2);
+	background: -o-linear-gradient($deg, $args1, $args2);
+	background: linear-gradient($deg, $args1, $args2);
+}
+
+@mixin gradient2($deg, $args1,$args2, $args3) {
+	background: -webkit-linear-gradient($deg, $args1, $args2, $args3);
+	background: -moz-linear-gradient($deg, $args1, $args2, $args3);
+	background: -ms-linear-gradient($deg, $args1, $args2, $args3);
+	background: -o-linear-gradient($deg, $args1, $args2, $args3);
+	background: linear-gradient($deg, $args1, $args2, $args3);
+}
+
+@mixin gradient-text($color1, $color2) {
+	background-image: -webkit-linear-gradient(left, $color1, $color2);
+	background-image: -moz-linear-gradient(left, $color1, $color2);
+	background-image: -ms-linear-gradient(left, $color1, $color2);
+	background-image: -o-linear-gradient(left, $color1, $color2);
+	background-image: linear-gradient(to right, $color1, $color2);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+
+//====================
+//= transform Mixinس=
+//====================
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-ms-transform: $transform;
+	-o-transform: $transform;
+	transform: $transform;
+}
+
+@mixin transform-origin($value) {
+	-webkit-transform-origin: $value;
+	-moz-transform-origin: $value;
+	-ms-transform-origin: $value;
+	-o-transform-origin: $value;
+	transform-origin: $value;
+}
+
+//=============================
+//= backface-visibility Mixin =
+//=============================
+
+@mixin backface-visibility($value) {
+	-webkit-backface-visibility: $value;
+	-moz-backface-visibility: $value;
+	backface-visibility: $value;
+}
+
+//=============================
+//= calc Mixin =
+//=============================
+
+@mixin calc ($property, $expression) {
+	#{$property}: -webkit-calc(#{$expression});
+	#{$property}: -moz-calc(#{$expression});
+	#{$property}: calc(#{$expression});
+}
+
+//====================
+//= keyframes Mixin=
+//====================
+
+@mixin keyframes ($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+//===================
+//= animation Mixin =
+//===================
+
+@mixin animation ($args) {
+	-webkit-animation: $args;
+	-moz-animation: $args;
+	-o-animation: $args;
+	animation: $args;
+}
+
+
+//=================================================
+//= Risponsive Mixin                              =
+//=================================================
+
+//================================
+//= Medium Layout: 1280px Mixin =                           =
+//================================
+
+@mixin medium {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+//================================
+//= Mobile Layout: 320px Mixin =                           =
+//================================
+
+@mixin mobile {
+	@media (min-width: 992px) and (max-width: 1200px){
+		@content;
+	}
+}
+
+//====================================
+//= Wide Mobile Layout: 480px Mixin =                           =
+//====================================
+
+@mixin wide-mobile {
+	@media (min-width: 768px)and (max-width: 992px){
+		@content;
+	}
+}
+
+//======================================
+//= cmq Layout max-width: 767px Mixin =                           =
+//======================================
+
+@mixin cmq {
+	@media(max-width: 767px) {
+		@content;
+	}
+}

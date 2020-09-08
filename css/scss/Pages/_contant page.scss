@@ -1,0 +1,149 @@
+.contant-page
+{
+    
+    max-width: 100%;
+    display: block;
+    overflow: hidden;
+
+    .contant-section
+    { 
+        max-width: 100%;
+        margin: 100px auto;
+        position: relative;
+        overflow: hidden;
+
+        h1 
+        {
+          font-size: 3rem;
+          text-align: center;
+          text-transform: capitalize;
+          font-family: serif;
+        }
+
+        //-----------------------------------
+        .Sections
+    {
+      text-align: $text_align_left;
+      position: relative;
+      padding: 32px;
+      height: 32em;
+      border: 2px solid black;
+      height: 511.992px;
+      @include medium
+      {
+        max-width: (99% / 2);
+        padding-left: 50px;
+      };
+      @include mobile
+      {
+        max-width: (99% / 2);
+        padding-left: 20px;
+      };
+      @include wide-mobile
+      {
+        max-width: (99% / 2);
+        padding-left: 20px;
+        
+      };
+      @include cmq
+      {
+        max-width: (99% / 1);
+        padding-left: 50px;
+  
+      };
+
+      //------------------------------------------------------------
+      // Sections  1
+
+      //-----------------------------------------------------------
+
+
+
+      //---------------------------------------------------------
+      //Sections 2
+      .tool-contant
+      {       
+          max-width: 100%;
+          position: relative;
+          overflow: hidden;
+          text-align: center;
+        .icon-contant
+        {
+            display: inline-block;
+            font-size: 50px;
+            line-height: 88px;
+           
+        }
+        .media-contant
+        {
+            display: inline-block;
+            padding-left: 20px;
+
+            span 
+            {
+                display: block;
+                line-height: 20px;
+            }
+            .address-icon-contant
+            {
+                font-size: 30px;
+                font-style: italic;
+                font-weight: bold;
+                font-family: sans-serif;
+                text-transform: capitalize;
+            }
+        }
+        .info-icon-contant
+        {
+            font-size: 20px;
+            padding-left: 111px;
+        }
+       
+
+      }
+     
+
+     
+  
+      }
+
+
+        //----------------------------------------
+
+    }
+    // map contant 
+    .map-contant
+    {
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 474px ;
+      .img-map
+      {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+
+      }
+      /*
+      .img-comp-contant
+      {
+        position: absolute;
+        position: absolute;
+        top: 228px;
+        left: 531px;
+        width: 130px;
+        z-index: 2;
+      }
+      */
+    }
+
+    
+}

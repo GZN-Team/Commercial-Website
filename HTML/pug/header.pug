@@ -1,0 +1,60 @@
+div(class="header")
+  div(class="header_container")
+      //div(class="risponsive_header")
+      img(src="img/4e.png"  alt="")
+        //- change menu_button to menu_icon
+        //- why btn_sml_head
+          button(class="Menu_button btn_sml_head" type="button")
+            span
+            span
+            span
+
+      //-(1)
+      ul(class="navbar js_nav_small")
+        li(): a(href="index1.html" class="navbar_elements") home
+
+        //-men
+        li(class="men_element")
+          a(href="prod.html" , class="navbar_elements")  men
+          div(class="men_dropdown_list dropdown_list")
+            a(href="#" ) New arrivals
+            a(href="#" ) Clothes
+            a(href="#" ) Shoes 
+            a(href="#" ) accessories
+
+        //-women
+        li(class="women_element")
+          a(href="prod.html" ,class="navbar_elements")  women
+          div(class="women_dropdown_list dropdown_list")
+            a(href="#" ) New arrivals
+            a(href="#" ) Clothes
+            a(href="#" ) Shoes
+            a(href="#" ) accessories
+
+        li: a(href="contant.html" class="navbar_elements") connect
+        li: a(href="#" class="navbar_elements") applition
+        
+        //-navbar icons:
+        li: a(class="navbar_elements navbar_icons" href="#" ): i(class="fa fa-search search-home")
+        li: a(class="navbar_elements navbar_icons" href="#" ): i(class="fa fa-user")
+        li: a(class="navbar_elements navbar_icons" href="wishlest.html" ): i(class="fa fa-heart")
+        li: a(class="navbar_elements navbar_icons" href="#" ): i(class="fa fa-shopping-cart icon-card")
+        li(class="navbar_elements language__element") English
+          i(class="ti-angle-down")
+          div(class="language_dropdown_list dropdown_list")
+            a(href="#" ) English
+            a(href="#" ) Arabic
+        //-
+          li
+          form(action="#" method="post")
+            select
+                option(value="english" selected) english
+                option(value="arbic") arbic    
+        
+                  
+
+
+  //- start search section
+  div(class="search panel-search inp-search-home")
+    form(action="#" method="post"): input(type="search" , class="input_search")
+  //- end search section

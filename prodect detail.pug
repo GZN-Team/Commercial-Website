@@ -1,15 +1,15 @@
-include pug_helper/mixin.pug
+include HTML/Pug/mixin.pug
 html
   head
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
     title Document
-    include pug_helper/linker.pug
+    include HTML/Pug/linker.pug
   body
-    include pug_helper/header.pug
+    include HTML/Pug/header.pug
     div(class="Product-Details")
-     div(class="contenr")
+     div(class="main_container")
 
       div(class="row-detail")
         div(class="image-detail")
@@ -68,7 +68,7 @@ html
     
     //-------------------------------------------------------------
     div(class="row-detial-inform")
-      div(class="contenr")
+      div(class="main_container")
         div(class="dy-meu-taps")
           ul(class="taps-list")
             li(class="active" data-content=".content-one") one
@@ -92,7 +92,7 @@ html
                   td 128mm
 
             div(class="content-three") 
-              div(class="row1")
+              div(class="Sections")
                div(class="media-suggest")
                 div(class="media")
                   div(class="media-inf")
@@ -105,7 +105,7 @@ html
                     || Beryl Cook is one of Britain’s most talented and amusing artists .
                     || Beryl Cook is one of Britain’s most talented and amusing artists .
                  
-              div(class="row1")
+              div(class="Sections")
                 form(action="#" class="contact-form form-suggest") 
                   div(class="form-group from-sugg")
                     input(type="email" class="form-control eml-suggest" placeholder="Your Email")
@@ -118,8 +118,8 @@ html
 
     //---------------------------------------
     div(class="detail-animtion")
-      div(class="contenr")
-        div(class="owl-carousel  owl-theme image_anim_home_cloths")
+      div(class="main_container")
+        div(class="owl-carousel  owl-theme image_anim_home_Clothes")
           +animatin_img(num_immage)
 	     
 				
@@ -137,5 +137,5 @@ html
 
     // footer the page prodect detail 
     +small_card
-    include pug_helper/footer.pug
-    include pug_helper/link_javascript.pug
+    include HTML/Pug/footer.pug
+    include HTML/Pug/link_javascript.pug
